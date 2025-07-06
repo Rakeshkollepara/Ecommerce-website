@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cart </title>
+  <style>
+      header {
+      background-color: white;
+      display: grid;
+      grid-template-columns: 60% 40%;
+      height: 100px;
+      width: 100%;
+      box-shadow: 2px 10px 20px lightgray;
+      position: fixed;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: rgb(5, 0, 0);
+      text-decoration: none;
+      padding: 40px;
+    }
+
+    nav {
+      margin: 45px;
+    }
+
+    body {
+      margin: 0;
+      padding-top: 120px;
+    }
+
+    .ten {
+      padding: 20px;
+      padding-left: 120px;
+    }
+    .ten1 {
+      
+      position: relative;
+      bottom: 20px;
+    }
+   
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f8fc;
+      margin: 0;
+      
+    }
+
+    .cart-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding:40px;
+    }
+
+    .cart-items {
+      flex: 1;
+      max-width: 70%;
+    }
+
+    .cart-item {
+      display: flex;
+      align-items: center;
+      background: #fff;
+      margin-bottom: 20px;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      justify-content: space-between;
+      height: 141px;
+    }
+
+    .cart-item img {
+      width: 100px;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .cart-info {
+      flex-grow: 1;
+      padding: 0 20px;
+    }
+
+    .cart-info h4 {
+      margin: 0 0 8px 0;
+      font-size: 16px;
+    }
+
+    .price {
+      color: #555;
+      font-size: 14px;
+    }
+
+    .bold-price {
+      color: #000;
+      font-weight: bold;
+      margin-left: 10px;
+      color: #2a7ae4;
+    }
+
+    .quantity-control {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      
+      position: relative;
+      top:60px;
+    }
+
+    .quantity-control button {
+      width: 38px;
+      height: 28px;
+      background-color: #f0f0f0;
+      border: none;
+      font-size: 18px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .remove-btn {
+      font-size: 25px;
+      cursor: pointer;
+      color: #444;
+      margin-left: 10px;
+      position: relative;
+      bottom:60px;
+    }
+
+    .cart-summary {
+      width: 25%;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      height: fit-content;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .cart-summary h3 {
+      margin-top: 0;
+    }
+
+    .cart-summary .total {
+      font-size: 22px;
+      font-weight: bold;
+      color: #2a7ae4;
+    }
+
+    @media(max-width: 768px) {
+      .cart-container {
+        flex-direction: column;
+      }
+
+      .cart-items, .cart-summary {
+        max-width: 100%;
+      }
+    }
+    footer{
+            background-color: rgb(48, 46, 46);
+            display: grid;
+            grid-template-columns: 25% 25% 25% 25%;
+             padding: 40px;
+        }
+  </style>
+</head>
+<body >
+    <header ><h1 >
+     <img class="ten" src="../IMAGES/bag-shopping-solid.svg" width="35" height="25" alt="MART"><b class="ten1">MART</b></span></h1>
+       
+      <nav> 
+      <a href="project.html"><b>Home</b></a>
+      <a href="shop.html"><b>Shop</b></a>
+      <a href="cart.html"><b>Cart</b></a>
+      <img src="../IMAGES/user-solid.svg" width="15" height="15" alt="User">
+      <img class="one" src="../IMAGES/cart-shopping-solid.svg" width="15" height="15" alt="Cart">
+    </nav>
+  </header><br>
+  <div class="cart-container">
+    <div class="cart-items">
+      
+      <!-- Item 1 -->
+      <div class="cart-item">
+        <img src="../IMAGES/double-sofa-01.png"  alt="Stone and Beam Westview">
+        <div class="cart-info">
+          <h4>Stone and Beam Westview</h4><br><br>
+          <div class="price">$193.00 × 1 <span class="bold-price">$193.00</span></div>
+        </div>
+        <div class="quantity-control">
+          <button><b>+</b></button>
+          <button><b>-</b></button>
+        </div>
+        <div class="remove-btn">✕</div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="cart-item">
+        <img src="../IMAGES/double-sofa-02.png" alt="Rivet Bigelow Modern">
+        <div class="cart-info">
+          <h4>Rivet Bigelow Modern</h4><br><br>
+          <div class="price">$253.00 × 1 <span class="bold-price">$253.00</span></div>
+        </div>
+        <div class="quantity-control">
+          <button><b>+</b></button>
+          <button><b>-</b></button>
+        </div>
+        <div class="remove-btn">✕</div>
+      </div>
+
+      <div class="cart-item">
+        <img src="../IMAGES/arm-chair-02.jpg" alt="Baltsar Chair">
+        <div class="cart-info">
+          <h4>Baltsar Chair</h4><br><br>
+          <div class="price">$89.00 × 1 <span class="bold-price">$89.00</span></div>
+        </div>
+        <div class="quantity-control">
+          <button><b>+</b></button>
+          <button><b>-</b></button>
+        </div>
+        <div class="remove-btn">✕</div>
+      </div>
+
+    </div>
+
+    <!-- Cart Summary -->
+    <div class="cart-summary">
+      <h3>Cart Summary</h3>
+      <p>Total Price :</p>
+      <p class="total">$535.00</p>
+    </div>
+  </div>
+
+
+
+  <footer style="background-color: rgb(37, 6, 122);">
+        <section style="color: antiquewhite;">
+          <h2>  <img src="../IMAGES/shopping-bag-xxl.png" width="28" height="25" ><b>Mart</b></h2>
+            <p>Lorem ipsum dolor sit <br>amet consectetur, adipisicing elit.<br> Rem ad ut aut quae facere nihil <br>similique voluptatem officia est, <br>dolorum, ea error adipisci animi quia <br>totam suscipit ipsum, placeat ab.</p>
+       
+        </section>
+            <section style="color: antiquewhite;">
+    <h3 >About Us</h3>
+    <p>Carrers<br><br>Our Stores<br><br>Our Cares<br><br>Terms & Conditions<br><br>Privacy Policy</p>
+</section>
+<section style="color: white;">
+    <h3>Customer Care</h3>
+    <p>Help Center<br><br>How to Buy<br><br>Track Your Order<br><br>Corporate & Bulk Purchasing<br><br>Returns & Refunds</p>
+
+</section>
+<section style="color: white;">
+    <h3>Contact Us</h3>
+    
+    #63, 1<sub>st</sub> Floor, 16<sub>th</sub>Main, 8<sub>th</sub><br>Cross,BTM 1<sub>st</sub>stage<br>BANGLORE, INDIA- 560029
+    <BR>
+        <BR>
+            India:+91 8431-040-457
+
+</section>
+    </footer>
+</body>
+</html>
